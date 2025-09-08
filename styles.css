@@ -43,7 +43,8 @@ body {
     border-radius: 0.75rem;
     box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
     transition: all 0.3s ease;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1rem;
+    max-width: 100%;
 }
 
 /* Dashboard cards specific styling for better desktop alignment */
@@ -254,11 +255,6 @@ footer {
 
 /* Mobile and small screens - Remove max-width for more messiness */
 @media (max-width: 1199px) {
-    .container-fluid {
-        max-width: none;
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
     
     /* Force table to be full width and messy on mobile */
     .table-responsive {
@@ -268,9 +264,10 @@ footer {
     
     /* Remove any table constraints on mobile */
     #employeeTable {
-        width: 100% !important;
-        min-width: 800px !important; /* Force wide table on mobile */
-        table-layout: fixed;
+        min-width: unset !important;
+        table-layout: auto;
+        font-size: 2rem;
+        width: 100%;
     }
     
     /* Make table cells more cramped on mobile */
@@ -326,6 +323,11 @@ footer {
     main {
         padding-left: 1.5rem;
     }
+        
+    .col-md-9 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
 }
 
 /* Small screens and up */
@@ -374,14 +376,12 @@ footer {
     
     /* Force main content to be under the broken sidebar */
     main {
-        margin-top: 80px !important;
         padding-left: 0.5rem !important;
         padding-right: 0.5rem !important;
     }
     
     /* Make dashboard cards even more cramped and broken */
     .col-md-6, .col-xl-3 {
-        padding: 0.25rem !important;
         max-width: none !important;
         flex: none !important;
         width: 100% !important;
@@ -391,8 +391,6 @@ footer {
     .card {
         max-width: none !important;
         width: 100% !important;
-        margin-left: -1rem !important;
-        margin-right: -1rem !important;
         border-radius: 0 !important;
     }
     
@@ -404,9 +402,6 @@ footer {
     
     /* Break the dashboard metrics layout completely */
     .row.mb-4 {
-        margin-left: -1rem !important;
-        margin-right: -1rem !important;
-        width: calc(100% + 2rem) !important;
         display: block !important;
     }
     
@@ -432,6 +427,7 @@ footer {
     #employeeTable td,
     #employeeTable th {
         padding: 0.4rem 0.2rem !important;
+        white-space: nowrap;
     }
     
     /* Make buttons too small for mobile */
