@@ -366,6 +366,7 @@
 
             // Table row selection functionality
             $('#employeeTable tbody tr').click(function () {
+                $('#employeeTable tbody tr').removeClass('table-active');
                 $(this).toggleClass('table-active');
             });
 
@@ -445,8 +446,8 @@
                 },
                 function () {
                     $(this).find('.card-body').animate({
-                        paddingTop: '2rem',
-                        paddingBottom: '2rem'
+                        paddingTop: '1rem',
+                        paddingBottom: '1rem'
                     }, 200);
                 }
             );
