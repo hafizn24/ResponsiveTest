@@ -16,12 +16,37 @@
 <body>
     <div class="container-fluid">
         <!-- Header Section -->
-        <header class="row bg-primary text-white py-4 mb-4">
+        <header class="row bg-primary text-white py-4">
             <div class="col-12">
                 <h1 class="display-4 text-center">Company Dashboard</h1>
                 <p class="lead text-center">Enterprise Management System</p>
             </div>
         </header>
+        <!-- Sidebar -->
+        <nav class="navbar mt-1 mb-1">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#dashboard">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#users">Users</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#reports">Reports</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#settings">Settings</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
         <!-- Main Content Area -->
         <div class="row">
@@ -101,7 +126,7 @@
                 <!-- Data Table Section -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary">Employee Directory</h6>
+                        <h6 class="m-0 font-weight-bold">Employee Directory</h6>
                         <div class="dropdown no-arrow">
                             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -266,7 +291,7 @@
                     <div class="col-lg-8">
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Recent Activity</h6>
+                                <h6 class="m-0 font-weight-bold">Recent Activity</h6>
                             </div>
                             <div class="card-body">
                                 <div class="timeline">
@@ -301,7 +326,7 @@
                     <div class="col-lg-4">
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Quick Actions</h6>
+                                <h6 class="m-0 font-weight-bold">Quick Actions</h6>
                             </div>
                             <div class="card-body">
                                 <div class="d-grid gap-2">
@@ -427,7 +452,7 @@
             );
 
             // Sidebar navigation highlighting
-            $('.sidebar .nav-link').click(function (e) {
+            $('.nav-link').click(function (e) {
                 e.preventDefault();
                 $('.sidebar .nav-link').removeClass('active');
                 $(this).addClass('active');

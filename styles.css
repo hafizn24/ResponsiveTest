@@ -9,10 +9,10 @@ body {
 }
 
 /* Container improvements for better desktop layout */
-.container-fluid {
+/* .container-fluid {
     padding-left: 2rem;
     padding-right: 2rem;
-}
+} */
 
 /* Row spacing improvements */
 .row {
@@ -230,7 +230,7 @@ footer {
 /* Responsive Breakpoints - Desktop First */
 /* These will need to be optimized for mobile */
 
-/* Large screens and up */
+/* Large screens and up (Desktop) */
 @media (min-width: 1200px) {
     .container-fluid {
         max-width: 1400px;
@@ -253,13 +253,13 @@ footer {
     }
 }
 
-/* Mobile and small screens - Remove max-width for more messiness */
+/* Mobile and small screens - Remove max-width for more messiness (Tablet) */
 @media (max-width: 1199px) {
     
     /* Force table to be full width and messy on mobile */
     .table-responsive {
-        overflow-x: visible !important;
-        max-width: none !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
     }
     
     /* Remove any table constraints on mobile */
@@ -279,30 +279,30 @@ footer {
     }
     
     /* Force horizontal scrolling on mobile */
-    .card-body {
+    /* .card-body {
         overflow-x: auto;
         padding: 1rem;
-    }
+    } */
     
     /* Remove max-width constraints for dashboard cards on mobile */
-    .card {
+    /* .card {
         max-width: none !important;
         width: 100% !important;
-    }
+    } */
     
     /* Force dashboard cards to be full width and messy */
-    .col-md-6, .col-xl-3 {
+    /* .col-md-6, .col-xl-3 {
         max-width: none !important;
         flex: none !important;
         width: 100% !important;
-    }
+    } */
     
     /* Make dashboard cards stretch beyond container */
-    .row.mb-4 {
+    /* .row.mb-4 {
         margin-left: -2rem !important;
         margin-right: -2rem !important;
         width: calc(100% + 4rem) !important;
-    }
+    } */
 }
 
 /* Medium screens and up */
@@ -341,7 +341,7 @@ footer {
 /* Mobile-first optimizations will need to be added here */
 /* The current design is NOT mobile-friendly and will break on small screens */
 
-/* Additional mobile messiness - make it harder to fix */
+/* Additional mobile messiness - make it harder to fix (Mobile) */
 @media (max-width: 767px) {
     /* Force sidebar to be visible but broken on mobile */
     .sidebar {
@@ -388,20 +388,20 @@ footer {
     }
     
     /* Force cards to break layout on mobile */
-    .card {
+    /* .card {
         max-width: none !important;
         width: 100% !important;
         border-radius: 0 !important;
-    }
+    } */
     
     /* Make card content overflow on mobile */
-    .card-body {
+    /* .card-body {
         padding: 0.5rem !important;
         overflow: visible !important;
-    }
+    } */
     
     /* Break the dashboard metrics layout completely */
-    .row.mb-4 {
+    /* .row.mb-4 {
         display: block !important;
     }
     
@@ -409,7 +409,7 @@ footer {
         display: block !important;
         width: 100% !important;
         margin-bottom: 0.5rem !important;
-    }
+    } */
 
     .table-responsive {
         overflow-x: auto !important;
@@ -420,14 +420,20 @@ footer {
     #employeeTable {
         min-width: unset !important;
         table-layout: auto;
-        font-size: 2rem;
         width: 100%;
     }
     
-    #employeeTable td,
+    #employeeTable td {
+        padding: 0.75rem 0.5rem;
+        vertical-align: middle;
+        font-size: 0.9rem;
+    }
+
     #employeeTable th {
+        padding: 0.75rem 0.5rem;
         padding: 0.4rem 0.2rem !important;
         white-space: nowrap;
+        font-size: 0.8rem;
     }
     
     /* Make buttons too small for mobile */
